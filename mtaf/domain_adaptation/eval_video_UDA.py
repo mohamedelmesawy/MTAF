@@ -214,7 +214,7 @@ def save_image_segmentation_frame(video_name, original_im, seg_map, index, cfg):
     exp_name = "BASELINE" if "baseline" in EXP_NAME else 'MTKT'
     video_name = "mit_driveseg_sample" # fix name from url
     
-    pred_path = f'../../../../eval_video_out/{exp_name}/{name}/video/{name}_{video_name}_{index:03}.png'
+    pred_path = f'../../eval_video_out/{exp_name}/{name}/video/{name}_{video_name}_{index:03}.png'
     all_images.transpose((1, 2, 0))
     cv2.imwrite(pred_path, cv2.cvtColor(all_images, cv2.COLOR_RGB2BGR))
 
@@ -223,8 +223,8 @@ def reconstruct_video(video_name):
   make_video(video_name)
 
 def stack_frames_for_video():
-  cityscap_to_stack_resized = cv2.imread('../../../../eval_video_out/stacked/cityscap_to_stack_resized.png')
-  Cityscapes_files = glob.glob("../../../../eval_video_out/BASELINE/Cityscapes/video/*png")
+  cityscap_to_stack_resized = cv2.imread('../../eval_video_out/stacked/cityscap_to_stack_resized.png')
+  Cityscapes_files = glob.glob("../../eval_video_out/BASELINE/Cityscapes/video/*png")
   # if len = 0 return
   Cityscapes_files.sort()
   print(Cityscapes_files)
@@ -238,7 +238,7 @@ def stack_frames_for_video():
     cv2.imwrite(path_to_save, cityescapes_stacked)
 
 def make_video(video_name):
-  image_folder='../../../../eval_video_out/stacked/Cityscapes/video'
+  image_folder='../../eval_video_out/stacked/Cityscapes/video'
   fps=30
   image_files = [os.path.join(image_folder,img)
                 for img in os.listdir(image_folder)
@@ -247,7 +247,7 @@ def make_video(video_name):
   clip = moviepy.video.io.ImageSequenceClip.ImageSequenceClip(image_files, fps=fps)
   if '/' in video_name:
     video_name = video_name.splite('/')[0]
-  clip.write_videofile('../../../../eval_video_out/stacked/Cityscapes_mit.mp4')
+  clip.write_videofile('../../eval_video_out/stacked/Cityscapes_mit.mp4')
 
 ################ End RAM video fns ##################
 
