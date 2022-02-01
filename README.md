@@ -160,7 +160,7 @@ $ cd <root_dir>/mtaf/scripts
 $ python test.py --cfg ./configs/gta2cityscapes_mapillary_mtkt.yml
 ```
 
-### Evaluation and save prediction
+### Evaluate images and save prediction
 To test the multi-target baseline:
 ```bash
 $ cd <root_dir>/mtaf/scripts
@@ -179,7 +179,7 @@ $ cd <root_dir>/mtaf/scripts
 $ python test_save.py --cfg ./configs/gta2cityscapes_mapillary_mtkt.yml
 ```
 
-### Evaluation video and save prediction
+### Evaluate video and save prediction
 To test the multi-target baseline:
 ```bash
 $ cd <root_dir>/mtaf/scripts
