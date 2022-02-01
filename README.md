@@ -160,6 +160,44 @@ $ cd <root_dir>/mtaf/scripts
 $ python test.py --cfg ./configs/gta2cityscapes_mapillary_mtkt.yml
 ```
 
+### Evaluation and save prediction
+To test the multi-target baseline:
+```bash
+$ cd <root_dir>/mtaf/scripts
+$ python test_save.py --cfg ./configs/gta2cityscapes_mapillary_baseline.yml
+```
+
+To test the Multi-Discriminator framework:
+```bash
+$ cd <root_dir>/mtaf/scripts
+$ python test_save.py --cfg ./configs/gta2cityscapes_mapillary_mdis.yml
+```
+
+To test the Multi-Target Knowledge Transfer framework:
+```bash
+$ cd <root_dir>/mtaf/scripts
+$ python test_save.py --cfg ./configs/gta2cityscapes_mapillary_mtkt.yml
+```
+
+### Evaluation video and save prediction
+To test the multi-target baseline:
+```bash
+$ cd <root_dir>/mtaf/scripts
+$ python test_video.py --cfg ./configs/gta2cityscapes_mapillary_baseline.yml
+```
+
+To test the Multi-Discriminator framework:
+```bash
+$ cd <root_dir>/mtaf/scripts
+$ python test_video.py --cfg ./configs/gta2cityscapes_mapillary_mdis.yml
+```
+
+To test the Multi-Target Knowledge Transfer framework:
+```bash
+$ cd <root_dir>/mtaf/scripts
+$ python test_video.py --cfg ./configs/gta2cityscapes_mapillary_mtkt.yml
+```
+
 ## Acknowledgements
 This codebase is heavily borrowed from [ADVENT](https://github.com/valeoai/ADVENT).
 
